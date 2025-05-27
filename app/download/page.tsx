@@ -18,7 +18,7 @@ const Download = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const { currency } = useUserCurrency();
-  const fadeInData = [useFadeIn()];
+  const fadeInData = [useFadeIn(), useFadeIn(), useFadeIn()];
 
   const checks = (type: "check" | "noCheck", children: string) => {
     return (
@@ -63,7 +63,7 @@ const Download = () => {
 
           <div className="flex gap-10 my-10 justify-center items-center w-full max-[600px]:flex-col">
             {animatedCards(
-              0,
+              1,
               <>
                 <div className="absolute right-0 top-0 m-5 text-gray-300/90 text-[25px] font-semibold">
                   Free
@@ -88,7 +88,7 @@ const Download = () => {
             )}
 
             {animatedCards(
-              0,
+              2,
               <>
                 <div className="absolute right-0 top-0 m-5 text-amber-400 text-[25px] font-semibold">
                   {price}
