@@ -39,7 +39,7 @@ const Download = () => {
       <AnimatedCard
         refProp={fadeInData[n].ref}
         animationProps={fadeInData[n].animationProps}
-        className="w-full"
+        className="w-full max-[600px]:min-h-[75vh]"
       >
         <Card3D className="relative pb-4 flex min-h-[350px] justify-between w-full flex-col pt-20 px-2">
           {children}
@@ -61,7 +61,7 @@ const Download = () => {
             Choose your plan
           </motion.h2>
 
-          <div className="flex gap-10 my-10 justify-center items-center w-full max-[600px]:flex-col">
+          <div className="flex min-[600px]:gap-10 my-10 justify-center items-center w-full max-[600px]:flex-col ">
             {animatedCards(
               1,
               <>
