@@ -86,7 +86,11 @@ const Features = () => {
         >
           All Features
         </motion.h2>
-        <motion.h3>
+        <motion.h3
+          ref={fadeInData[1].ref}
+          {...fadeInData[1].animationProps}
+          className="text-white"
+        >
           To use this extension, is required{" "}
           <Link
             href={
