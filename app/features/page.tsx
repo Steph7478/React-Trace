@@ -93,7 +93,7 @@ const Features = () => {
         >
           To use this extension, is required{" "}
           <Link
-            className="text-amber-400 underline hover:brightness-125"
+            className="text-amber-400 underline hover:brightness-125 text-center"
             href={
               "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
             }

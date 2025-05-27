@@ -1,11 +1,11 @@
-import {useInView} from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 
-export const useFadeIn = (options = {triggerOnce: true, threshold: 0.3}) => {
+export const useFadeIn = (options = { triggerOnce: true, threshold: 0.2 }) => {
   const [ref, inView] = useInView(options);
 
   const fadeInVariants = {
-    hidden: {opacity: 0, y: 50},
-    visible: {opacity: 1, y: 0, transition: {duration: 0.8}},
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
   const animationProps = {
@@ -14,5 +14,5 @@ export const useFadeIn = (options = {triggerOnce: true, threshold: 0.3}) => {
     variants: fadeInVariants,
   };
 
-  return {ref, animationProps};
+  return { ref, animationProps };
 };
