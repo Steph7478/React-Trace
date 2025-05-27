@@ -13,16 +13,16 @@ const About = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const fadeInData = [useFadeIn()];
+  const fadeInData = [useFadeIn(), useFadeIn()];
   return (
-    <div className="min-[1150px]:px-10 max-[1150px]:pb-[30px] pt-[60px] max-[1150px]:px-4 min-h-screen flex justify-start items-center w-full">
-      <div className="flex max-[1150px]:flex-col justify-center max-[1150px]:gap-20 max-w-[1150px] items-center w-full max-[1150px]:pt-[30px]">
+    <div className="min-[1150px]:px-10 max-[1150px]:pb-[30px] pt-[60px] max-[1150px]:px-4 h-full min-h-screen flex justify-start items-center w-full">
+      <div className="flex max-[1150px]:flex-col justify-center min-h-screen max-[1150px]:gap-20 max-w-[1150px] items-center w-full max-[1150px]:pt-[30px]">
         <motion.div
           ref={fadeInData[0].ref}
           {...fadeInData[0].animationProps}
           className="flex flex-col gap-10 justify-center items-center w-full h-full"
         >
-          <div className="relative w-[300px] h-[300px]">
+          <div className="relative max-w-[300px] w-full h-full max-h-[300px]">
             <div className="absolute inset-0 z-0 before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-violet-600/25 before:blur-[60px] before:opacity-70"></div>
 
             <div className="relative w-full h-full rounded-full overflow-hidden z-10">
@@ -41,15 +41,16 @@ const About = () => {
               <Image
                 src="/avatar.png"
                 alt=""
+                priority
                 width={800}
                 height={800}
-                className="w-full h-full object-cover rounded-full"
+                className="w-auto h-auto object-cover rounded-full"
               />
             </div>
           </div>
 
           <Typewriter
-            tag="h3"
+            tag="h2"
             className="text-4xl text-white overflow-hidden text-center min-h-[80px] font-bold"
             phrases={[
               `Hi there! <span class="text-fuchsia-500">I'm Stephanie.</span>`,
@@ -60,8 +61,8 @@ const About = () => {
         </motion.div>
 
         <AnimatedCard
-          refProp={fadeInData[0].ref}
-          animationProps={fadeInData[0].animationProps}
+          refProp={fadeInData[1].ref}
+          animationProps={fadeInData[1].animationProps}
           className="w-full h-full max-w-[550px]"
         >
           <Card3D className="relative flex min-h-[350px] justify-center py-20 items-center text-lg font-semibold w-full flex-col px-5">
@@ -69,7 +70,7 @@ const About = () => {
               width={30}
               height={30}
               src="/components.png"
-              className="drop-shadow-[0_0_10px_#ff3de7] rounded-lg absolute top-0 left-0 m-5"
+              className="drop-shadow-[0_0_10px_#ff3de7] rounded-lg absolute w-auto h-auto top-0 left-0 m-5"
               alt="Descriptive alt text"
             />
             <p>

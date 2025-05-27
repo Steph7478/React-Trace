@@ -46,7 +46,6 @@ const Home = () => {
       <Image
         src="/main-bg.png"
         alt="main background"
-        layout="responsive"
         className="object-contain blur-sm absolute top-10 left-0 right-0 -z-10"
         width={1920}
         height={1080}

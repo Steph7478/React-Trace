@@ -35,8 +35,8 @@ const Navbar = () => {
         <Image
           src="/icon.png"
           alt="icon"
-          layout="responsive"
-          className="w-full h-full"
+          priority
+          className="w-auto h-auto"
           width={50}
           height={50}
         />
