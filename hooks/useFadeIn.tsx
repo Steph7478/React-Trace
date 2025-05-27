@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 
-export const useFadeIn = (options = { triggerOnce: true, threshold: 0.2 }) => {
+export const useFadeIn = (options = { triggerOnce: true, threshold: 0.1 }) => {
   const [ref, inView] = useInView(options);
 
   const fadeInVariants = {
