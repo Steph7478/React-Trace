@@ -95,7 +95,7 @@ const Features = () => {
           <Link
             className="text-amber-400 underline hover:brightness-125"
             href={
-              "/https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+              "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
             }
             rel="noopener noreferrer"
             target="_blank"
