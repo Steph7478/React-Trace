@@ -83,7 +83,7 @@ const Home = () => {
               </Link>
             </motion.div>
           </div>
-          <div className="max-w-[600px] w-full">
+          <div className="max-w-[600px] w-full h-full">
             {animatedCards(
               1,
               <Image
@@ -91,9 +91,9 @@ const Home = () => {
                 width={1200}
                 height={1000}
                 alt=""
-                className="w-auto h-auto object-cover"
+                className="w-auto h-auto object-center object-cover "
               />,
-              "p-0"
+              "p-0 min-h-fit"
             )}
           </div>
 

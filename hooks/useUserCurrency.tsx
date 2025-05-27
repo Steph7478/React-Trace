@@ -19,7 +19,7 @@ export function useUserCurrency() {
         setIp(data.ip);
         setCurrency(data.currency);
       } catch (err) {
-        console.error("Erro ao detectar moeda:", err);
+        console.error("Erro ao detectar moeda");
       }
 
       setLoading(false);
