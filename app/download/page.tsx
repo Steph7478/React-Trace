@@ -39,7 +39,7 @@ const Download = () => {
       <AnimatedCard
         refProp={fadeInData[n].ref}
         animationProps={fadeInData[n].animationProps}
-        className="w-full max-[600px]:min-h-[75vh]"
+        className="w-full max-[600px]:min-h-[65vh]"
       >
         <Card3D className="relative pb-4 flex min-h-[350px] justify-between w-full flex-col pt-20 px-2">
           {children}
