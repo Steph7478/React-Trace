@@ -46,13 +46,14 @@ const Home = () => {
       <Image
         src="/main-bg.png"
         alt="main background"
-        className="object-contain blur-sm absolute top-10 left-0 right-0 -z-10"
+        priority
+        className="object-cover object-center  blur-sm absolute top-10 left-0 right-0 -z-10"
         width={1920}
         height={1080}
       />
       <div className="max-w-[850px] w-full h-full flex-grow items-center flex flex-col gap-y-20">
         <section className="flex flex-col w-full h-full text-center items-center justify-center p-2">
-          <div className="min-h-screen flex flex-col items-center justify-center gap-y-8">
+          <div className="min-h-screen flex flex-col items-center justify-center gap-y-8 pb-10">
             <motion.h1
               ref={fadeInData[0].ref}
               {...fadeInData[0].animationProps}
@@ -71,7 +72,7 @@ const Home = () => {
             <motion.div
               ref={fadeInData[0].ref}
               {...fadeInData[0].animationProps}
-              className="flex gap-x-4 mt-4"
+              className="flex gap-x-4 mt-2"
             >
               <Link href={"/download"}>
                 {" "}
@@ -90,7 +91,7 @@ const Home = () => {
                 width={1200}
                 height={1000}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-auto h-auto object-cover"
               />,
               "p-0"
             )}
@@ -130,7 +131,7 @@ const Home = () => {
                       width={30}
                       height={30}
                       src="/status.png"
-                      className="drop-shadow-[0_0_10px_#693efe] rounded-lg absolute top-0 left-0 m-5"
+                      className="drop-shadow-[0_0_10px_#693efe] w-auto h-auto rounded-lg absolute top-0 left-0 m-5"
                       alt="Descriptive alt text"
                     />
                     <div className="w-full h-full px-2 py-4 mt-auto flex flex-col justify-center items-start text-start">
@@ -151,7 +152,7 @@ const Home = () => {
                       width={30}
                       height={30}
                       src="/detection.png"
-                      className="drop-shadow-[0_0_10px_#ad3dff] rounded-lg absolute top-0 left-0 m-5"
+                      className="drop-shadow-[0_0_10px_#ad3dff] w-auto h-auto rounded-lg absolute top-0 left-0 m-5"
                       alt="Descriptive alt text"
                     />
                     <div className="w-full h-full px-2 py-4 mt-auto flex flex-col justify-center items-start text-start">
@@ -179,7 +180,7 @@ const Home = () => {
                     width={30}
                     height={30}
                     src="/components.png"
-                    className="drop-shadow-[0_0_10px_#ff3de7] rounded-lg absolute top-0 left-0 m-5"
+                    className="drop-shadow-[0_0_10px_#ff3de7] rounded-lg absolute top-0 w-auto h-auto left-0 m-5"
                     alt="Descriptive alt text"
                   />
 
@@ -204,7 +205,7 @@ const Home = () => {
                         width={1400}
                         height={1400}
                         alt=""
-                        className="w-full h-full object-cover flex-grow object-left"
+                        className="w-auto h-auto object-cover flex-grow object-left"
                       />
                     </Card3D>
                   </div>

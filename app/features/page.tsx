@@ -69,9 +69,8 @@ const Features = () => {
             <Image
               width={1000}
               height={1000}
-              layout="responsive"
               alt="Extension"
-              className=" border-violet-600/25 border-[1px] rounded-[20px] w-full h-full"
+              className=" border-violet-600/25 border-[1px] rounded-[20px] w-auto h-auto"
               src="/mac.png"
             />
           </Card3D>
@@ -89,11 +88,11 @@ const Features = () => {
         <motion.h3
           ref={fadeInData[1].ref}
           {...fadeInData[1].animationProps}
-          className="text-white"
+          className="text-white text-center"
         >
           To use this extension, is required{" "}
           <Link
-            className="text-amber-400 underline hover:brightness-125 text-center"
+            className="text-amber-400 underline hover:brightness-125 font-semibold"
             href={
               "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
             }
