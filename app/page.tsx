@@ -139,10 +139,10 @@ const Home = () => {
                         Status
                       </h3>
                       <p>
-                        Get a quick overview of your app’s rendering behavior,
-                        including total render time, number of renders, and the
-                        amount of detected issues. This gives you a clear sense
-                        of performance health at a glance.
+                        Get a quick overview of your app&apos;s rendering
+                        behavior, including total render time, number of
+                        renders, and the amount of detected issues. This gives
+                        you a clear sense of performance health at a glance.
                       </p>
                     </div>
                   </>
@@ -191,8 +191,8 @@ const Home = () => {
                       </h3>
                       <p>
                         This section surfaces components that are rendering too
-                        often or taking too long. You’ll see when a render is
-                        likely unnecessary or when it exceeds performance
+                        often or taking too long. You&apos;ll see when a render
+                        is likely unnecessary or when it exceeds performance
                         thresholds, making it easy to focus your optimization
                         efforts where they matter most.
                       </p>
@@ -218,10 +218,10 @@ const Home = () => {
                   <p>
                     Track, visualize, and diagnose React rendering with
                     precision. Explore the full component tree, spot costly
-                    renders instantly, and understand the "why" behind every
-                    update. With real-time insights, performance summaries, and
-                    smart issue detection, your extension helps developers
-                    optimize with confidence.
+                    renders instantly, and understand the &quot;why&quot; behind
+                    every update. With real-time insights, performance
+                    summaries, and smart issue detection, your extension helps
+                    developers optimize with confidence.
                   </p>
                   <Link href={"/download"}>
                     <Button intent={"primary"}>Install the Extension</Button>

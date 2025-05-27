@@ -73,11 +73,11 @@ const About = () => {
               alt="Descriptive alt text"
             />
             <p>
-              I'm a self-taught frontend developer with strong skills in{" "}
+              I&apos;m a self-taught frontend developer with strong skills in{" "}
               <span className="text-sky-400">
                 React, Next.js, TypeScript, Framer Motion,
               </span>{" "}
-              and <span className="text-sky-400">Tailwind CSS</span>. I'm
+              and <span className="text-sky-400">Tailwind CSS</span>. I&apos;m
               passionate about expanding my knowledge and becoming a fullstack
               developer.
               <br />

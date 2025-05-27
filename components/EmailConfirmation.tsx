@@ -7,6 +7,7 @@ import { LabeledInput } from "./LabeledInput";
 import { LabeledSelect, Option } from "./LabeledSelect";
 import { useUserCurrency } from "@/hooks/useUserCurrency";
 import { Button } from "@/ui/button";
+import { AxiosError } from "axios";
 
 type SignUpProps = {
   isOpen: boolean;
@@ -69,8 +70,9 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
       } else {
         throw new Error("Checkout URL not found");
       }
-    } catch (err: any) {
-      setError(err.response?.data?.error || err.message);
+    } catch (err) {
+      const error = err as AxiosError<{ error: string }>;
+      setError(error.response?.data?.error || error.message);
     } finally {
       setIsProcessing(false);
     }
