@@ -53,6 +53,12 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
     prevCurrency.current = currency;
   }, [currency]);
 
+  function warning() {
+    window.alert(
+      "The extension is still being reviewed by the Chrome Web Store. It will be available for purchase soon!"
+    );
+  }
+
   async function startCheckout() {
     setError("");
     setIsProcessing(true);
@@ -134,7 +140,7 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
 
                 <Button
                   intent={"pay"}
-                  onClick={startCheckout}
+                  onClick={warning}
                   disabled={currencyLoading || isProcessing}
                 >
                   {" "}
