@@ -84,6 +84,8 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
     }
   }
 
+  void startCheckout;
+
   return (
     <>
       <div
