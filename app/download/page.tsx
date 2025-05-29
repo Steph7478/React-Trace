@@ -16,6 +16,12 @@ const Download = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  function warning() {
+    window.alert(
+      "The extension is still being reviewed by the Chrome Web Store. It will be available for purchase soon!"
+    );
+  }
+
   const [isOpen, setIsOpen] = useState(false);
   const { currency } = useUserCurrency();
   const fadeInData = [useFadeIn(), useFadeIn(), useFadeIn()];
@@ -81,9 +87,10 @@ const Download = () => {
                   {checks("noCheck", "Supports React")}
                   {checks("check", "All features")}
                 </div>
-                <Link target="_blank" rel="noopener noreferrer" href="/">
-                  <Button intent={"primary"}>Free to install</Button>
-                </Link>
+
+                <Button intent={"primary"} onClick={warning}>
+                  Free to install
+                </Button>
               </>
             )}
 
