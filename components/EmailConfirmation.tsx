@@ -32,7 +32,7 @@ const paymentMethodOptionsOther: Option[] = [
 type PaymentMethod = "card" | "boleto";
 
 const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
-  const { currency, setCurrency, loading: currencyLoading } = useUserCurrency();
+  const { currency, setCurrency } = useUserCurrency();
 
   const [error, setError] = useState("");
   const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
@@ -143,7 +143,7 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
                 <Button
                   intent={"pay"}
                   onClick={warning}
-                  disabled={currencyLoading || isProcessing}
+                  disabled={isProcessing}
                 >
                   {" "}
                   {isProcessing ? "Processing..." : "Pay"}
