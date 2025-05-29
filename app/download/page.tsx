@@ -9,7 +9,6 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Payment from "@/components/EmailConfirmation";
 import { useUserCurrency } from "@/hooks/useUserCurrency";
-import Link from "next/link";
 
 const Download = () => {
   useEffect(() => {
