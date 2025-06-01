@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/libs/clsx";
+import { cn } from "@/libs/cn";
 import { cva, VariantProps } from "class-variance-authority";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 

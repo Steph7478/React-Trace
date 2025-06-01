@@ -1,4 +1,4 @@
-import { cn } from "@/libs/clsx";
+import { cn } from "@/libs/cn";
 import { cva, VariantProps } from "class-variance-authority";
 import React from "react";
 
