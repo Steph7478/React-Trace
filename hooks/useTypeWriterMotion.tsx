@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useEffect, JSX } from "react";
-import { motion } from "framer-motion";
+import React, {useState, useEffect, JSX} from "react";
+import {motion} from "framer-motion";
+import parse from "html-react-parser";
 
 type TypewriterProps = {
   phrases: string[];
@@ -99,11 +100,12 @@ export default function Typewriter({
         display: "inline",
       }}
     >
-      <span dangerouslySetInnerHTML={{ __html: partialHTML }} />
+      <span>{parse(partialHTML)}</span>
+
       <motion.span
-        style={{ marginLeft: 2 }}
-        animate={{ opacity: [1, 0, 1] }}
-        transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+        style={{marginLeft: 2}}
+        animate={{opacity: [1, 0, 1]}}
+        transition={{duration: 1, repeat: Infinity, ease: "easeInOut"}}
         aria-hidden="true"
       >
         |

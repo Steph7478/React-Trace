@@ -1,6 +1,6 @@
 "use client";
 
-import { api } from "@/api";
+import { api } from "@/app/services/api/apiClient";
 import { Card3D } from "@/ui/card";
 import React, { useState, useEffect, useRef } from "react";
 import { LabeledInput } from "./LabeledInput";

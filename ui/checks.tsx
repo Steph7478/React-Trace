@@ -1,4 +1,4 @@
-import { cn } from "@/libs/inde";
+import { cn } from "@/libs/clsx";
 import { cva, VariantProps } from "class-variance-authority";
 import React from "react";
 import { FaCheck } from "react-icons/fa";
@@ -29,9 +29,15 @@ type CheckProps = React.HTMLAttributes<HTMLParagraphElement> &
 const Check = React.forwardRef<HTMLParagraphElement, CheckProps>(
   ({ className, intent, textIntent, children, ...props }, ref) => {
     return (
-      <span ref={ref} className={cn(textVariants({ textIntent }), className)} {...props}>
+      <span
+        ref={ref}
+        className={cn(textVariants({ textIntent }), className)}
+        {...props}
+      >
         {intent === "check" && <FaCheck className={iconVariants({ intent })} />}
-        {intent === "noCheck" && <ImCross className={iconVariants({ intent })} />}
+        {intent === "noCheck" && (
+          <ImCross className={iconVariants({ intent })} />
+        )}
         {children}
       </span>
     );
