@@ -1,5 +1,5 @@
 "use client";
-import { api } from "@/app/services/api/apiClient";
+import { api } from "@/services/api/apiClient";
 import { useState, useEffect } from "react";
 
 export function useUserCurrency() {
