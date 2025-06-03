@@ -2,7 +2,7 @@
 
 import { api } from "@/services/api/apiClient";
 import { Card3D } from "@/ui/card";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { LabeledInput } from "./LabeledInput";
 import { LabeledSelect, Option } from "./LabeledSelect";
 import { useUserCurrency } from "@/hooks/useUserCurrency";
