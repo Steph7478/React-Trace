@@ -28,12 +28,6 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
   const [email, setEmail] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
 
-  function warning() {
-    window.alert(
-      "The extension is still being reviewed by the Chrome Web Store. It will be available for purchase soon!"
-    );
-  }
-
   async function startCheckout() {
     setError("");
     setIsProcessing(true);
