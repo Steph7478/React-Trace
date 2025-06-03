@@ -9,17 +9,12 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Payment from "@/components/EmailConfirmation";
 import { useUserCurrency } from "@/hooks/useUserCurrency";
+import Link from "next/link";
 
 const Download = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  function warning() {
-    window.alert(
-      "The extension is still being reviewed by the Chrome Web Store. It will be available for purchase soon!"
-    );
-  }
 
   const [isOpen, setIsOpen] = useState(false);
   const { currency } = useUserCurrency();
@@ -86,10 +81,15 @@ const Download = () => {
                   {checks("noCheck", "Supports React")}
                   {checks("check", "All features")}
                 </div>
-
-                <Button intent={"primary"} onClick={warning}>
-                  Free to install
-                </Button>
+                <Link
+                  href={
+                    "https://chromewebstore.google.com/detail/reacttrace-demo/gdfekalebdmlfmbjakmfkklbebenlgac?authuser=2"
+                  }
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  <Button intent={"primary"}>Free to install</Button>
+                </Link>
               </>
             )}
 
@@ -112,18 +112,12 @@ const Download = () => {
                   {checks("check", "Supports React")}
                   {checks("check", "All features")}
                 </div>
-                <Button onClick={warning} intent={"third"}>
+                <Button onClick={() => setIsOpen(true)} intent={"third"}>
                   Get it for <span className="text-green-400">{price}</span>
                 </Button>
               </>
             )}
           </div>
-          <button
-            onClick={() => setIsOpen(true)}
-            className="opacity-0 absolute bottom-0 left-0"
-          >
-            a
-          </button>
         </section>
       </div>
     </>

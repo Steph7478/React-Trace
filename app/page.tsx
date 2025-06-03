@@ -13,12 +13,6 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  function warning() {
-    window.alert(
-      "The extension is still being reviewed by the Chrome Web Store. It will be available for purchase soon!"
-    );
-  }
-
   const fadeInData = [
     useFadeIn(),
     useFadeIn(),
@@ -84,10 +78,15 @@ const Home = () => {
                 {" "}
                 <Button intent={"secondary"}>Install the Extension</Button>
               </Link>
-
-              <Button onClick={warning} intent={"primary"}>
-                Chrome Web Store
-              </Button>
+              <Link
+                href={
+                  "https://chromewebstore.google.com/detail/reacttrace/inknnbamfelahmngdlnbabjbhcejagmi?authuser=2"
+                }
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <Button intent={"primary"}>Chrome Web Store</Button>
+              </Link>
             </motion.div>
           </div>
           <div className="max-w-[600px] w-full h-full">

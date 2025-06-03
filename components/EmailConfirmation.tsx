@@ -8,6 +8,7 @@ import { LabeledSelect, Option } from "./LabeledSelect";
 import { useUserCurrency } from "@/hooks/useUserCurrency";
 import { Button } from "@/ui/button";
 import { AxiosError } from "axios";
+import Link from "next/link";
 
 type SignUpProps = {
   isOpen: boolean;
@@ -71,7 +72,7 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
       >
         <Card3D
           onClick={(e) => e.stopPropagation()}
-          className="relative w-[350px] h-[350px] rounded-lg overflow-hidden"
+          className="relative w-[350px] h-[300px] rounded-lg overflow-hidden"
         >
           <div className="absolute inset-0 backdrop-blur-md bg-[#0b0121]/70 z-0 " />
 
@@ -102,6 +103,20 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
                   {" "}
                   {isProcessing ? "Processing..." : "Pay"}
                 </Button>
+
+                <span>
+                  Already payed?{" "}
+                  <Link
+                    className="text-amber-400 hover:brightness-125 underline"
+                    href={
+                      "https://chromewebstore.google.com/detail/reacttrace/inknnbamfelahmngdlnbabjbhcejagmi?authuser=2"
+                    }
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Click here to install
+                  </Link>
+                </span>
               </>
             )}{" "}
             {!isProcessing && checkoutUrl && (
