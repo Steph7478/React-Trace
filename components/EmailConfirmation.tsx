@@ -20,38 +20,13 @@ const currencyOptions: Option[] = [
   { value: "eur", label: "EUR - Euro" },
 ];
 
-const paymentMethodOptionsBRL: Option[] = [
-  { value: "card", label: "Credit Card" },
-  { value: "boleto", label: "Boleto" },
-];
-
-const paymentMethodOptionsOther: Option[] = [
-  { value: "card", label: "Credit Card" },
-];
-
-type PaymentMethod = "card" | "boleto";
-
 const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
   const { currency, setCurrency } = useUserCurrency();
 
   const [error, setError] = useState("");
   const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
   const [email, setEmail] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
   const [isProcessing, setIsProcessing] = useState(false);
-  const prevCurrency = useRef(currency);
-
-  useEffect(() => {
-    if (prevCurrency.current !== currency) {
-      const options =
-        currency === "brl"
-          ? paymentMethodOptionsBRL
-          : paymentMethodOptionsOther;
-
-      setPaymentMethod(options[0].value as PaymentMethod);
-    }
-    prevCurrency.current = currency;
-  }, [currency]);
 
   function warning() {
     window.alert(
@@ -66,7 +41,6 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
     try {
       const res = await api.post("api/v1/checkout", {
         currency,
-        paymentMethod,
         email,
       });
 
@@ -83,8 +57,6 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
       setIsProcessing(false);
     }
   }
-
-  void startCheckout;
 
   return (
     <>
@@ -120,18 +92,6 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
                   options={currencyOptions}
                 />
 
-                <LabeledSelect
-                  id="paymentMethod"
-                  label="Choose a payment method:"
-                  value={paymentMethod}
-                  onChange={(val) => setPaymentMethod(val as PaymentMethod)}
-                  options={
-                    currency === "brl"
-                      ? paymentMethodOptionsBRL
-                      : paymentMethodOptionsOther
-                  }
-                />
-
                 <LabeledInput
                   id="email"
                   label="Enter your email:"
@@ -142,7 +102,7 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
 
                 <Button
                   intent={"pay"}
-                  onClick={warning}
+                  onClick={startCheckout}
                   disabled={isProcessing}
                 >
                   {" "}

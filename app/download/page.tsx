@@ -112,12 +112,18 @@ const Download = () => {
                   {checks("check", "Supports React")}
                   {checks("check", "All features")}
                 </div>
-                <Button onClick={() => setIsOpen(true)} intent={"third"}>
+                <Button onClick={warning} intent={"third"}>
                   Get it for <span className="text-green-400">{price}</span>
                 </Button>
               </>
             )}
           </div>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="opacity-0 absolute bottom-0 left-0"
+          >
+            a
+          </button>
         </section>
       </div>
     </>
