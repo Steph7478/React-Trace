@@ -105,7 +105,7 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
                 </Button>
 
                 <span>
-                  Already payed?{" "}
+                  Already paid?{" "}
                   <Link
                     className="text-amber-400 hover:brightness-125 underline"
                     href={
