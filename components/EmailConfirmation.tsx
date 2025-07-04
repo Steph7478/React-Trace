@@ -22,10 +22,10 @@ const currencyOptions: Option[] = [
 const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
   const { currency, setCurrency } = useUserCurrency();
 
-  const [error, setError] = useState("");
-  const [checkoutUrl, setCheckoutUrl] = useState<string | null>(null);
+  const [error] = useState("");
+  const [checkoutUrl] = useState<string | null>(null);
   const [email, setEmail] = useState("");
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [isProcessing] = useState(false);
 
   // async function startCheckout() {
   //   setError("");
