@@ -29,29 +29,35 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
   const [email, setEmail] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
 
-  async function startCheckout() {
-    setError("");
-    setIsProcessing(true);
+  // async function startCheckout() {
+  //   setError("");
+  //   setIsProcessing(true);
 
-    try {
-      const res = await api.post("api/v1/checkout", {
-        currency,
-        email,
-      });
+  //   try {
+  //     const res = await api.post("api/v1/checkout", {
+  //       currency,
+  //       email,
+  //     });
 
-      if (res.data?.url) {
-        setCheckoutUrl(res.data.url);
-        window.location.href = res.data.url;
-      } else {
-        throw new Error("Checkout URL not found");
-      }
-    } catch (err) {
-      const error = err as AxiosError<{ error: string }>;
-      setError(error.response?.data?.error || error.message);
-    } finally {
-      setIsProcessing(false);
-    }
-  }
+  //     if (res.data?.url) {
+  //       setCheckoutUrl(res.data.url);
+  //       window.location.href = res.data.url;
+  //     } else {
+  //       throw new Error("Checkout URL not found");
+  //     }
+  //   } catch (err) {
+  //     const error = err as AxiosError<{ error: string }>;
+  //     setError(error.response?.data?.error || error.message);
+  //   } finally {
+  //     setIsProcessing(false);
+  //   }
+  // }
+
+  const startCheckout = () => {
+    window.alert(
+      "Due to no sales, I deactivated this project. If you're still interested, you can contact me."
+    );
+  };
 
   return (
     <>
