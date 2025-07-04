@@ -1,13 +1,11 @@
 "use client";
 
-import { api } from "@/services/api/apiClient";
 import { Card3D } from "@/ui/card";
 import React, { useState } from "react";
 import { LabeledInput } from "./LabeledInput";
 import { LabeledSelect, Option } from "./LabeledSelect";
 import { useUserCurrency } from "@/hooks/useUserCurrency";
 import { Button } from "@/ui/button";
-import { AxiosError } from "axios";
 import Link from "next/link";
 
 type SignUpProps = {
