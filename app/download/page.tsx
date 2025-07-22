@@ -9,9 +9,12 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Payment from "@/components/EmailConfirmation";
 import { useUserCurrency } from "@/hooks/useUserCurrency";
-import Link from "next/link";
 
 const Download = () => {
+  const startCheckout = () => {
+    window.alert("Due to no sales, I deactivated this project.");
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -81,15 +84,10 @@ const Download = () => {
                   {checks("noCheck", "Supports React")}
                   {checks("check", "All features")}
                 </div>
-                <Link
-                  href={
-                    "https://chromewebstore.google.com/detail/reacttrace-demo/gdfekalebdmlfmbjakmfkklbebenlgac?authuser=2"
-                  }
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <Button intent={"primary"}>Free to install</Button>
-                </Link>
+
+                <Button intent={"primary"} onClick={startCheckout}>
+                  Free to install
+                </Button>
               </>
             )}
 

@@ -9,6 +9,10 @@ import { AnimatedCard } from "@/hooks/useAnimatedCards";
 import Link from "next/link";
 
 const Home = () => {
+  const startCheckout = () => {
+    window.alert("Due to no sales, I deactivated this project.");
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -78,15 +82,10 @@ const Home = () => {
                 {" "}
                 <Button intent={"secondary"}>Install the Extension</Button>
               </Link>
-              <Link
-                href={
-                  "https://chromewebstore.google.com/detail/reacttrace/inknnbamfelahmngdlnbabjbhcejagmi?authuser=2"
-                }
-                rel="noreferrer noopener"
-                target="_blank"
-              >
-                <Button intent={"primary"}>Chrome Web Store</Button>
-              </Link>
+
+              <Button intent={"primary"} onClick={startCheckout}>
+                Chrome Web Store
+              </Button>
             </motion.div>
           </div>
           <div className="max-w-[600px] w-full h-full">

@@ -52,9 +52,7 @@ const Payment: React.FC<SignUpProps> = ({ isOpen, setIsOpen }) => {
   // }
 
   const startCheckout = () => {
-    window.alert(
-      "Due to no sales, I deactivated this project. If you're still interested, you can contact me."
-    );
+    window.alert("Due to no sales, I deactivated this project.");
   };
 
   return (
